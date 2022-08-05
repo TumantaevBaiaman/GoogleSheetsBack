@@ -21,6 +21,7 @@ class ListView(views.APIView):
 class ListUpdate(views.APIView):
 
     def get(self, request, format=None):
+        delete_db()
         update_db()
         data = read()
         info = [i for i in data]
